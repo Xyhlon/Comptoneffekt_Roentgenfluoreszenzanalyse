@@ -5,10 +5,11 @@
 
 % Kopfzeile
 \ihead{WS22\\
-	22.03.2023} \chead{\textsc{Stark} Matthias - 12004907 \\
+	29.03.2023} \chead{\textsc{Stark} Matthias - 12004907 \\
 	\textsc{Philipp} Maximilian - 11839611}
-\ohead{FLAB 2 \\
-	Festkörperphysik}
+\ohead{Röntgenfluoreszenzanalyse \\ 
+%FLAB 2 \\
+Compton-Effekt}
 
 % Fußzeile
 %todo
@@ -65,28 +66,77 @@ Dabei werden folgende Punkte durchgeführt:
 
 \section{Grundlagen}\label{Grund}
 
+
 \subsection{Röntgenfluoreszenzanalyse}
 
 
 \subsection{Compton-Effekt}
 
-%\begin{figure}[H]
-%	\begin{center}
-%		\includegraphics[width =0.5\textwidth]{./figures/messung_s.PNG}
-%	\end{center}
-%	\caption[Von Auslenkung s auf Radius r schließen]
-%	{Von Auslenkung s auf Radius r schließen \cite{unterlagen_welle_teilchen_dualismus}
-%	}\label{fig:von_s_auf_r}
-%\end{figure}
+
 
 \section{Versuchsanordnung}\label{sec:versuchsanordnung}
 
+Für beide Teile des Versuchs wird das Röntgengerät aus \autoref{fig:aufabau} verwendet.
+Zunächst wird die Stromversorgung
+und die Verbindung zum PC mittels Cassy Lab hergestellt. Nun wird mit den Drehschaltern eine
+Spannung von \SI{30.0(2)}{\kilo eV} und ein Strom von \SI{1.00(2)}{mA} eingestellt.
+Nach richtigen SChließen der Tür wird die Röntgenstrahlung mit dem HV Knopf kurz eingeschaltet,
+um zu überprüfen, ob das Gerät funktioniert.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width =0.8\textwidth]{./figures/aufbau.jpg}
+	\end{center}
+	\caption[Verwendetes Röntgengerät]
+	{Verwendetes Röntgengerät\\
+	1 \dots Röherenraum mit Röntgenröhre\\
+	2 \dots Kollimator\\
+	3 \dots Targetarm mit Targettisch auf Goniometer\\
+	4 \dots Sensor auf Goniometer\\
+	5 \dots Bedienfeld mit Drehschalter für alle Einstellungen\\
+	6 \dots Cassy Lab 2\\
+	7 \dots Pinzette für Probenwechsel\\
+	8 \dots Zr- Filter\\
+	9 \dots Abschwächerblende
+	}\label{fig:aufabau}
+\end{figure}
+
 \subsection{Röntgenfluoreszenzanalyse}
 
+Zunächst werden die Abstände zwischen Kollimator und Target bzw. zwischen Target und Sensor eingestellt, damit diese 
+5 - 6 cm betragen. Dies geschieht manuell durch Lockerung der entsprechenden Schraube und Bewegung des Bauteils auf den
+Führungsschienen.
+Nun werden die Winkel des Targetarms und 
+des Senosors eingestellt. Wichtig ist dabei, dass dies elektrisch, über die entsprechenden Knöpfe geschieht.
+Der Winkel des Targets wird dabei auf \SI{45.0(2)}{\degree} eingestellt, der des Sensors auf \SI{90.0(2)}{\degree}.
+Mit der "Zero"-Taste können die Winkel zurück in die Ausgangsposition gebracht werden.
 
 \subsection{Compton-Effekt}
 
+Für diesen Teil des Versuchs wird der Zr-Filter (siehe 8 in \autoref{fig:aufabau}) verwendet.
+Dieser wird über den Metalbolzen des Kolimators geschoben, bevor dieser in seine Einbuchtung gesteckt wird.
+Für die Aufnahme des Kalibrierungsspektrums wird zusätzlich noch die Abschwächerblende verwendet. Diese wird 
+über den Kolimator geschoben, wie in \autoref{fig:abschwacheblende} sichtbar. Zusätzlich wird für
+die Kalibration auch der Targethalter ausgebaut.
+
+
+\begin{figure}[H]
+	\centering
+	\captionbox[Montierte Abschwächerblende]{Montierte Abschwächerblende\label{fig:abschwacheblende}}{
+		\includegraphics[width=.45\textwidth]{./figures/blende.PNG} } \hfill
+	\captionbox[Maximale Auslenkung des Sensors]{Maximale Auslenkung des Sensors\label{fig:auslenkung}}{
+		\includegraphics[width=0.45\textwidth]{./figures/auslenkung.PNG} }
+\end{figure}
+
+
+Für die Messung der Streuwinkel wir die Abschwächerblende wider entfernt und der Targethalter eingebaut. 
+Bezüglich der Abstände von Sensor und Targethalter wird darauf geachtet, dass ein Schwenken von bis zu 
+\SI{150.0(2)}{\degree} möglich ist, wie in \autoref{fig:auslenkung} sichtbar.
+
+
 \section{Geräteliste}\label{sec:geraeteliste}
+
+%todo
 
 Für die Elektronen-Spin-Resonanz werden die in \autoref{tab:gerate_spin} aufgelisteten
 Geräte verwendet.
@@ -107,7 +157,6 @@ Geräte verwendet.
 	\end{tblr}\label{tab:gerate_spin}
 \end{table}
 
-%todo max bitte schiebelehre ergänzen
 
 
 \section{Versuchsdurchführung und Messergebnisse}\label{sec:versuchsdurchfuehrung_messergebnisse}
