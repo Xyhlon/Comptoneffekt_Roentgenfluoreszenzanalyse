@@ -163,11 +163,56 @@ Geräte verwendet.
 
 \subsection{Röntgenfluoreszenzanalyse}
 
+\subsubsection{Aufnahme des Kalibrierungsspektrums}
+
+Nachdem der Versuchsaufbau, wie bereits in \autoref{sec:versuchsanordnung} erklärt, durchgeführt wurde,
+wird zunächst das Kalibrierungstarget aus die entsprechende Position gelegt. Dabei handelt es sich um 
+ein verzinktes Eisenblech. Nun werden die Winkel des Targets und des Sensors richtig eingestellt und der
+Sensor über das Cassy Lab 2 mit dem Computer verbunden.
+In der Computersoftware werden unter den Messparametern die Einstellungen 
+"Vielkanalmessung, 512 Kanäle, negative Pulse, Verstärkung = -2,5, Messdauer = 300 s“
+eingegeben. Nun kann der Röntgenstrom eingeschaltet und die Messung gestartet werden.
+
+Nun müssen den zwei erzeugten Peaks die entsprechenden Energien zugeordnet werden. 
+Für Fe ist die entsprechende Energie \SI{6.40}{keV} und für Zn \SI{8.64}{keV} \cite{unterlagen_rontgenfluorenzenz}.
+Das erzeugte Kalibrierungsspektrum ist in \autoref{fig:kalibrierung_rontgenfluoreszenz} sichtbar.
+
+%todo fig:kalibrierung_rontgenfluoreszenz
+
 \subsubsection{bereitgestellte Metalle}
 
+Nachdem das Kalibrierungsspektrum aufgenommen wurde werden nun die verschiedenen Proben auf den Targethalter gelegt 
+und die Messung, wie bereits zuvor für die Kalibreirung beschrieben, durchgeführt. Beim Wechseln der Proben ist zu beachten, 
+dass die Röntgenstrahlung immer ausgeschalten ist, wenn die Tür geöffnet wird. Auch muss die Röntgenstrahlung kurz 
+eingeschaltet werden bis die Glühkathode einen konstanten Farbverlauf aufweißt, bevor die Messung gestartet wird.
+Die so erzeugten Diagramme der einzenen Proben sind in folgenden Abbildungen immer mit dem Referenzspektrum sichtbar.
+
+%todo alle diagramme
 
 \subsubsection{unbekannte Probe}
 
+Nun werden zwei eigene Proben, sichtbar in \autoref{fig:unbekannte_pr}, auf den Targethalter gelegt, um deren genaue Zusammensetzung zu bestimmen.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width =0.8\textwidth]{./figures/eigene_proben.jpg}
+	\end{center}
+	\caption[Eigene Proben]
+	{Eigene Proben\\
+	1 \dots Neodynmagnet auf Eisenplättchen\\
+	2 \dots Ring
+	}\label{fig:unbekannte_pr}
+\end{figure}
+
+Um den Neodynmagneten besser auf dem Targethalter positionieren zu können, wurde dieser auf die Eisenplatte gegeben. Bei der
+Auswertung ist nun zu beachten, dass diese Eisenplatte auch berücksichtigt werden muss.
+Beim Ring ist zu Beachten dass bei der Positionierung darauf geachtet wurde, dass die Röntgenstrahlen den Ring auch 
+wirklich treffen.
+
+Die Messung der beiden Proben erfolgt nach dem gleichen scheme wie zuvor bei den Metallplättchen.
+Die erzeugten Messungen sind in folgenden Abbildungen sichtbar.
+
+%todo unbekannte proben
 
 \subsection{Compton-Effekt}
 
