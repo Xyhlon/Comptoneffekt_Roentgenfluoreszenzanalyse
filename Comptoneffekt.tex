@@ -1,0 +1,208 @@
+%! TeX program = lualatex
+%---------------------------ALLGEMEINE IMPORTS-------------------------------------
+\documentclass[12pt,english,ngerman]{scrartcl}
+\input{./protokoll_template/template.latex/input/shared_preamble.tex}
+
+% Kopfzeile
+\ihead{WS22\\
+	22.03.2023} \chead{\textsc{Stark} Matthias - 12004907 \\
+	\textsc{Philipp} Maximilian - 11839611}
+\ohead{FLAB 2 \\
+	Festkörperphysik}
+
+% Fußzeile
+%todo
+%\addbibresource{SolarWirkungsgrad.bib}
+
+\usepackage{luacode}
+
+\DeclareSIUnit\px{px}
+\DeclareSIUnit\strich{|||}
+\DeclareSIUnit\Var{var}
+\DeclareSIUnit\VA{VA}
+\DeclareSIUnit\bar{bar}
+
+\usepackage{cleveref}
+
+\crefname{enumerate}{Aufzählung}{Aufzählungen}
+
+\begin{document}
+
+\begin{luacode*}
+	dofile("createExtraPDF.lua")
+\end{luacode*}
+
+%todo
+%\includepdf{./deckblatt.pdf}
+\tableofcontents
+
+\newpage
+
+\section{Aufgabenstellung\label{Auf}}
+
+\subsection{Röntgenfluoreszenzanalyse}
+
+Im Zuge des Beispiels Röntgenfluoreszenzanalyse sind folgende Versuche durchzuführen:
+
+\begin{itemize}
+	\item Aufnahme und Kalibrierung eines Röntgenenergiespektrums
+	\item Zeigen der Gültigkeit des Moseleyschen Gesetzes anhand der bereitgestellten Metalle und 
+	Ermittlung der Abschirmkonstante der K-Linien
+	\item Analyse der Zusammensetzung von unbekannten Proben
+\end{itemize}
+
+\subsection{Compton-Effekt}
+
+Ziel dieses Versuchs ist die Messung der Energie der gestreuten Photonen in Abhängigkeit vom Streuwinkel. 
+Dabei werden folgende Punkte durchgeführt:
+
+\begin{itemize}
+	\item Aufnahme des Primärspektrums und Energiekalibrierung des Detektors
+	\item Aufnahme der Spektren in Streuanordnung
+	\item Bestimmung der Energie als Funktion des Streuwinkels
+\end{itemize}
+
+
+\section{Grundlagen}\label{Grund}
+
+\subsection{Röntgenfluoreszenzanalyse}
+
+
+\subsection{Compton-Effekt}
+
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[width =0.5\textwidth]{./figures/messung_s.PNG}
+%	\end{center}
+%	\caption[Von Auslenkung s auf Radius r schließen]
+%	{Von Auslenkung s auf Radius r schließen \cite{unterlagen_welle_teilchen_dualismus}
+%	}\label{fig:von_s_auf_r}
+%\end{figure}
+
+\section{Versuchsanordnung}\label{sec:versuchsanordnung}
+
+\subsection{Röntgenfluoreszenzanalyse}
+
+
+\subsection{Compton-Effekt}
+
+\section{Geräteliste}\label{sec:geraeteliste}
+
+Für die Elektronen-Spin-Resonanz werden die in \autoref{tab:gerate_spin} aufgelisteten
+Geräte verwendet.
+
+\begin{table}[H]
+	\caption{Verwendete Geräte für die Elektronen-Spin-Resonanz
+	}
+	\begin{tblr}{cells={font=\footnotesize},colspec={lllll}}
+			\textbf{Gerätetyp}    & \textbf{Hersteller} & \textbf{Typ}     & \textbf{Inventar-Nr} & \textbf{Anmerkung}              \\
+			ESR-Grundgerät        & KFU Graz            & Rep-Art-Onl-1066 & REP103801            &                                 \\
+			ESR-Betriebsgerät     & Leybold             & 514571           &                      & mit Amperemeter                 \\
+			Zweikanal Oszilloskop & Hameg               & HM205-2          & DOZ-3                & analog                          \\
+			Helmholzspule         & LD                  & 555604           &                      & 2 x                             \\
+			Steckspulen           &                     &                  &                      & mit unterschiedlichen Windungen \\
+			Graphitprobe          &                     &                  &                      &                                 \\
+			Sockel                &                     &                  &                      &                    \\
+			Kabel                 &                     &                  &                      & BNC und Banane                 
+	\end{tblr}\label{tab:gerate_spin}
+\end{table}
+
+%todo max bitte schiebelehre ergänzen
+
+
+\section{Versuchsdurchführung und Messergebnisse}\label{sec:versuchsdurchfuehrung_messergebnisse}
+
+\subsection{Röntgenfluoreszenzanalyse}
+
+\subsubsection{bereitgestellte Metalle}
+
+
+\subsubsection{unbekannte Probe}
+
+
+\subsection{Compton-Effekt}
+
+\subsubsection{Energiekalibrierung des Detektors}
+
+\subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
+
+
+
+
+
+\section{Auswertung}\label{sec:auswertung}
+
+Um zu sehen wie sich die Unsicherheit der Messungen bis in die Ergebnisse
+fortpflanzt, ist erweiterte Gauss-Methode verwendet worden. Die Grundlagen
+dieser Methode stammen von den Powerpointfolien von
+GUM~\cite{wolfgang_kessel_isobipm-gum_2004}. Für die Auswertung ist die
+Progammiersprache Python im speziellen die Pakete \verb#labtool-ex2#,
+\verb#pandas#, \verb#sympy#, \verb#lmfit# zur Hilfe genommen worden.
+\verb#lmfit# wurde für das Fitten verwendet, \verb#sympy# wurde für symbolische
+Manipulation verwendet und die restlichen Pakete für leichteres Handhaben der
+Daten. Dies wurde aber alles durch \verb#labtool-ex2# abstrahiert.
+
+Um höchstmögliche Genauigkeit zu garantieren wird erst bei der Darstellung der
+Wert in Tabellen gerundet.
+
+
+\subsection{Röntgenfluoreszenzanalyse}
+
+\subsubsection{bereitgestellte Metalle}
+
+
+\subsubsection{unbekannte Probe}
+
+
+\subsection{Compton-Effekt}
+
+\subsubsection{Energiekalibrierung des Detektors}
+
+\subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
+
+
+
+\section{Diskussion}\label{sec:diskussion}
+
+\subsection{Röntgenfluoreszenzanalyse}
+
+\subsubsection{bereitgestellte Metalle}
+
+
+\subsubsection{unbekannte Probe}
+
+
+\subsection{Compton-Effekt}
+
+\subsubsection{Energiekalibrierung des Detektors}
+
+\subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
+
+
+
+\section{Zusammenfassung}\label{sec:zusammenfassung}
+
+Hier werden nochmals alle Ergebnisse dieser Experimentenfolge aufgelistet.
+Wobei die meisten zu erstellenden Diagramme Aufgrund der Länge der
+\autoref{sec:auswertung} entnommen werden sollen.
+
+\subsection{Röntgenfluoreszenzanalyse}
+
+\subsubsection{bereitgestellte Metalle}
+
+
+\subsubsection{unbekannte Probe}
+
+
+\subsection{Compton-Effekt}
+
+\subsubsection{Energiekalibrierung des Detektors}
+
+\subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
+
+
+\newpage
+\printbibliography
+\listoffigures
+\listoftables
+\end{document}
