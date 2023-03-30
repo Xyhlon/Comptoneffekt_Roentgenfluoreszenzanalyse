@@ -81,12 +81,21 @@ def test_compton_protokoll():
     )
     Er = ufloat(vals["Er"].value, vals["Er"].stderr)
     print(Er * 1e3 * elementary_charge / speed_of_light**2)
-    # print(P.data)
-    #
+
     P.figure.suptitle("Fit Spezifischer Elektronenmasse")
     P.figure.tight_layout()
     P.ax_legend_all(loc=4)
     ax = P.savefig("Klein-Nishina.pdf")
+
+    # Aufgabe 2
+    file = "../data/alleSpektren.csv"
+    filepath = os.path.join(os.path.dirname(__file__), file)
+    P.load_data(filepath, loadnew=True)
+
+    for elem in ["Ti", "Fe", "Ni", "Cu", "Zn", "Zr", "Mo", "Ag", "Mag", "Ring"]:
+        print(P.data[f"E{elem}"].values[P.data[f"N{elem}"].idxmax()])
+
+    # print(P.data)
 
 
 if __name__ == "__main__":
