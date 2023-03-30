@@ -209,7 +209,7 @@ Auswertung ist nun zu beachten, dass diese Eisenplatte auch berücksichtigt werd
 Beim Ring ist zu Beachten dass bei der Positionierung darauf geachtet wurde, dass die Röntgenstrahlen den Ring auch 
 wirklich treffen.
 
-Die Messung der beiden Proben erfolgt nach dem gleichen scheme wie zuvor bei den Metallplättchen.
+Die Messung der beiden Proben erfolgt nach dem gleichen Schema wie zuvor bei den Metallplättchen.
 Die erzeugten Messungen sind in folgenden Abbildungen sichtbar.
 
 %todo unbekannte proben
@@ -218,11 +218,43 @@ Die erzeugten Messungen sind in folgenden Abbildungen sichtbar.
 
 \subsubsection{Energiekalibrierung des Detektors}
 
+Nachdem das Röntgengerät wie bereits in \autoref{sec:versuchsanordnung} beschrieben vorbereitet wurde, indem
+der Targetarm ausgebaut wird und Zr - Filter, sowie die Abschwächerblende positioniert wurden, wird zunächst der
+Emissionsstrom auf \SI{0.05(2)}{mA} reduziert.
+In der Cassy Lab Software werden die folgende Einstellungen vorgenommen: 
+"Vielkanalmessung, 512 Kanäle, negative Pulse, Verstärkung = -4, Messdauer = 300 s“
+Nun wird das Maximum der Zählrate bestimmt, indem eine Messung gestartet wird und der Sensor langsam um 
+die 0°-Linie geschwenkt wird, bis das Maximum verzeichnet wird, was im konkreten Fall bei folgenden Winkel 
+$\alpha_{max}$ der Fall war.
+
+\begin{equation*}
+	\alpha_{max} = \SI{-0.6(2)}{\degree}
+\end{equation*}
+
+Mit diesem Winkel wird eine gesammte Messperiode aufgezeichnet. Auch hier ist es wichtig darauf zu achten, dass die 
+Tür ordnungsgemäß geschlossen ist.
+Nun wird in der Computersoftware unter dem gleichnamigen Dialogfenster eine Energiekalibrierung durchgeführt,
+indem die Energien für Au L$\alpha$ - \SI{9.71}{keV} und Mo K$\alpha$ - \SI{17.44}{keV} übergeben werden \cite{unterlagen_compton}.
+Die so erzeugte Grafik ist in \autoref{fig:kalibrierung_compton} sichtbar.
+
+%todo fig:kalibrierung_compton
+
 \subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
 
+Nun wird, wie bereits in \autoref{sec:versuchsanordnung} beschrieben, die Abschwächerblende entfernt und
+der Targethalter wieder Eingebaut. Auf diesen wirdvorsichtig die Plexiglasprobe gelegt.
+Weiters wird wieder ein Emissionsstrom von \SI{1.00(2)}{mA} verwendet.
+Nun wird der Targetarm über den entsprechenden Drehknopf um einen Winkel von \SI{20.0(2)}{\degree} geneigt und 
+für alle Messungen in dieser Position belassen.
+Für die verschiedenen Messungen wird nun der Neigungswinkel des Sensors variiert. Um den tatsächlichen Auslenkungswinkel
+im Bezug zur Energiekalibrierung zu messen muss beachtet werden, dass der zuvor bestimmte Versatz von \SI{-0.6(2)}{\degree}
+immer berücksichtigt wird. Eine tatsächliche Verdrehung des Sensors von \SI{30}{\degree} würde daher beispielsweise
+einem Wert von \SI{29.4}{\degree} in der Anzeige entsprechen. Der besseren Übersicht halber, werden die Winkel in 
+\autoref{tab:werte_compton} bezüglich der Kalibrierung angegeben. Nun wird in der Computersoftware über die peak-finder
+Funktion die Energie des Peaks beim entsprechenden Abstrahlwinkel bestimmt und in \autoref{tab:werte_compton} notiert.
 
 
-
+%todo tab:werte_compton
 
 \section{Auswertung}\label{sec:auswertung}
 
@@ -248,13 +280,14 @@ Wert in Tabellen gerundet.
 \subsubsection{unbekannte Probe}
 
 
+
 \subsection{Compton-Effekt}
 
 \subsubsection{Energiekalibrierung des Detektors}
 
 \subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
 
-
+%todo bild mit sichtbarer verschiebung
 
 \section{Diskussion}\label{sec:diskussion}
 
@@ -265,6 +298,12 @@ Wert in Tabellen gerundet.
 
 \subsubsection{unbekannte Probe}
 
+Um sicherzustellen, ob sich die Kalibration nicht verändert hat wurde zum Schluss nochmals die Fe Probe eingelegt
+und der in \autoref{fig:fe_zumSchluss} sichtbare Energieverlauf erzeugt.
+
+%todo fig:fe_zumSchluss
+
+Hier wird klar ersichtlich, dass sich die Kalibrierung, wie erwartet, nicht geändert hat.
 
 \subsection{Compton-Effekt}
 
