@@ -175,9 +175,19 @@ eingegeben. Nun kann der Röntgenstrom eingeschaltet und die Messung gestartet w
 
 Nun müssen den zwei erzeugten Peaks die entsprechenden Energien zugeordnet werden. 
 Für Fe ist die entsprechende Energie \SI{6.40}{keV} und für Zn \SI{8.64}{keV} \cite{unterlagen_rontgenfluorenzenz}.
-Das erzeugte Kalibrierungsspektrum ist in \autoref{fig:kalibrierung_rontgenfluoreszenz} sichtbar.
+Das erzeugte Kalibrierungsspektrum, samt den durchgeführten Einstellungen, ist in \autoref{fig:kalibrierung_rontgenfluoreszenz} sichtbar.
 
-%todo fig:kalibrierung_rontgenfluoreszenz
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width =\textwidth]{./figures/roentgen/FeZnKalibrierung.PNG}
+	\end{center}
+	\caption[Aufgezeichnetes Kalibrierungsspektrum mit Interface]
+	{\footnotesize Aufgezeichnetes Kalibrierungsspektrum von Fe und Zn mit Interface \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	}\label{fig:kalibrierung_rontgenfluoreszenz}
+\end{figure}
+
 
 \subsubsection{bereitgestellte Metalle}
 
@@ -187,7 +197,74 @@ dass die Röntgenstrahlung immer ausgeschalten ist, wenn die Tür geöffnet wird
 eingeschaltet werden bis die Glühkathode einen konstanten Farbverlauf aufweißt, bevor die Messung gestartet wird.
 Die so erzeugten Diagramme der einzenen Proben sind in folgenden Abbildungen immer mit dem Referenzspektrum sichtbar.
 
-%todo alle diagramme
+\begin{figure}[H]
+	\centering
+	\captionbox[Gemessenes Spektrum der Ti - Probe]{\footnotesize Gemessenes Spektrum der Ti - Probe (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{fig:spektrum_Ti}}{
+		\includegraphics[width=.45\textwidth]{./figures/roentgen/TI.png} } \hfill
+	\captionbox[Gemessenes Spektrum der Fe - Probe]{\footnotesize Gemessenes Spektrum der Fe - Probe (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{spektrum_Fe}}{
+		\includegraphics[width=0.45\textwidth]{./figures/roentgen/Fe.png} }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\captionbox[Gemessenes Spektrum der Ni - Probe]{\footnotesize Gemessenes Spektrum der Ni - Probe (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{fig:spektrum_Ni}}{
+		\includegraphics[width=.45\textwidth]{./figures/roentgen/Ni.png} } \hfill
+	\captionbox[Gemessenes Spektrum der Cu - Probe]{\footnotesize Gemessenes Spektrum der Cu - Probe (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{spektrum_Cu}}{
+		\includegraphics[width=0.45\textwidth]{./figures/roentgen/Cu.png} }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\captionbox[Gemessenes Spektrum der Zn - Probe]{\footnotesize Gemessenes Spektrum der Zn - Probe (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{fig:spektrum_Zn}}{
+		\includegraphics[width=.45\textwidth]{./figures/roentgen/Zn.png} } \hfill
+	\captionbox[Gemessenes Spektrum der Zr - Probe]{\footnotesize Gemessenes Spektrum der Zr - Probe (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{spektrum_Zr}}{
+		\includegraphics[width=0.45\textwidth]{./figures/roentgen/Zr.png} }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\captionbox[Gemessenes Spektrum der Mo - Probe]{\footnotesize Gemessenes Spektrum der Mo - Probe (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{fig:spektrum_Mo}}{
+		\includegraphics[width=.45\textwidth]{./figures/roentgen/Mo.png} } \hfill
+	\captionbox[Gemessenes Spektrum der Ag - Probe]{\footnotesize Gemessenes Spektrum der Ag - Probe (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{spektrum_Ag}}{
+		\includegraphics[width=0.45\textwidth]{./figures/roentgen/Ag.png} }
+\end{figure}
+
+Der gemessene Energiewert des Peaks wird in der Software mit der paek finder Funktion bestimmt und nochmals in
+\autoref{tab:energien_roentgen} angeführt.
+
+%todo tab:energien_roentgen
 
 \subsubsection{unbekannte Probe}
 
@@ -195,7 +272,7 @@ Nun werden zwei eigene Proben, sichtbar in \autoref{fig:unbekannte_pr}, auf den 
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width =0.8\textwidth]{./figures/eigene_proben.jpg}
+		\includegraphics[width =0.5\textwidth]{./figures/eigene_proben.jpg}
 	\end{center}
 	\caption[Eigene Proben]
 	{Eigene Proben\\
@@ -210,9 +287,23 @@ Beim Ring ist zu Beachten dass bei der Positionierung darauf geachtet wurde, das
 wirklich treffen.
 
 Die Messung der beiden Proben erfolgt nach dem gleichen Schema wie zuvor bei den Metallplättchen.
-Die erzeugten Messungen sind in folgenden Abbildungen sichtbar.
+Die erzeugten Spektren sind in folgenden \autoref{fig:spektrum_magnet} und \autoref{fig:spektrum_ring} sichtbar.
 
-%todo unbekannte proben
+\begin{figure}[H]
+	\centering
+	\captionbox[Gemessenes Spektrum des Magneten]{\footnotesize Gemessenes Spektrum des Magneten (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{fig:spektrum_magnet}}{
+		\includegraphics[width=.45\textwidth]{./figures/roentgen/Magnet.png} } \hfill
+	\captionbox[Gemessenes Spektrum des Rings]{\footnotesize Gemessenes Spektrum des Rings (rot) mit 
+	Kalibrierungsspektrum von Fe und Zn (schwarz) \\
+	$E_A$ \dots entsprechende Energie in keV\\
+	$N_A$ \dots verzeichnete Counts
+	\label{fig:spektrum_ring}}{
+		\includegraphics[width=0.45\textwidth]{./figures/roentgen/Ring.png} }
+\end{figure}
 
 \subsection{Compton-Effekt}
 
