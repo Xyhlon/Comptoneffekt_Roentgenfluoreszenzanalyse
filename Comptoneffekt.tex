@@ -69,10 +69,102 @@ Dabei werden folgende Punkte durchgeführt:
 
 \subsection{Röntgenfluoreszenzanalyse}
 
+%todo Max text von röntgenflureszens bitte mit KI
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width =0.5\textwidth]{./figures/skizze_roentgendetektor.PNG}
+	\end{center}
+	\caption[Schematische Skizze eines Röntgendetektors]
+	{Schematische Skizze eines Röntgendetektors
+	\cite{unterlagen_rontgenfluorenzenz}
+	}\label{fig:skizze_roetgendetektor}
+\end{figure}
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width =0.5\textwidth]{./figures/termschema_roentgenlinien.PNG}
+	\end{center}
+	\caption[Termschema der charakteristischen Röentgenlinien]
+	{Termschema der charakteristischen Röentgenlinien
+	\cite{unterlagen_rontgenfluorenzenz}
+	}\label{fig:termschema_roentgenlinien}
+\end{figure}
 
 \subsection{Compton-Effekt}
 
+Der Comptonefferkt dient als Nachweis des Teilchencharakters von Licht. Er besagt, dass wenn
+ein beliebiges Material mit Röntgenstrahlung der Wellenlänge $\lambda_0$ bestrahlt, so wird bei der
+Streustrahlung auch Wellenlänge $\lambda_s > \lambda_0$ festgestellt.
+Dies kann durch Stoßvorgänge zwischen den Röntgenquanten und den freien Elektronen erklärt werden,
+bei denen Energie vom Quant auf das Elektron übertragen wird, wie in \autoref{fig:skizze_compton} sichtbar.
 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width =\textwidth]{./figures/skizze_compton.PNG}
+	\end{center}
+	\caption[Darstellung des Comptoneffekts]
+	{Schematische Darstellung des Comptoneffekts (b) Darstellung des Impulsübertrags
+	\cite{unterlagen_compton}
+	}\label{fig:skizze_compton}
+\end{figure}
+
+
+Zunächst wird das Elektron vor dem Stoß als ruhend betrachten.
+Es wird davon ausgegangen, dass dieses im Streumaterial nur schwach gebunden ist.
+Dadurch kann die Vernachlässigung der Bindungsenergie gerechtfertigt werden. Beim einem Stoß
+kann nun aus der Erhaltung für die Energie $E$ und den Impuls $p$ der Röntgenstrahlung folgender Zusammenhang gefolgert werden.
+
+\begin{equation}
+	h v_0+e^{-} \rightarrow h v_S+e^{-}\left(E_{k i n}\right) \\
+	E=h v=\frac{\hbar c}{\lambda}\\
+	\vec{p}=\hbar \vec{k} \text { und }|p|=\frac{h}{\lambda}
+	\label{eq:energie_impuls}
+\end{equation}
+
+$h$ beschreibt dabei das Plancksches Wirkungsquantum,
+$c$ die Lichtgeschwindigkeit,
+$\lambda$ die Wellenlänge und 
+$V$ die Frequenz der Röntgenstrahlung
+
+Eine relativistische Betrachtung liefert für den Energiesatz somit:
+\begin{equation}
+	E_{\text {kin }}^e=\frac{m_0 c^2}{\sqrt{1-\beta^2}}-m_0 c^2, \text { mit } \beta=\frac{v}{c}
+\label{eq:energiesatz_relativistisch}
+\end{equation}
+
+Daraus folgt für den Impuls:
+\begin{equation}
+	\hbar \overrightarrow{k_0}=\hbar \overrightarrow{k_S}+\overrightarrow{p_e} \text { mit } \overrightarrow{p_e}=\frac{m_0 \bar{v}}{\sqrt{1-\beta^2}}
+\label{eq:impuls_relativistisch}
+\end{equation}
+
+Daraus folgt:
+
+\begin{equation}
+	v_0-v_S=\frac{h}{m_0 c^2} v_0 v_S(1-\cos \varphi)
+\label{eq:v0-vs}
+\end{equation}
+
+Woraus sich für die Compton-Streuformel folgender Zusammenhang ergibt:
+
+\begin{equation}
+	\lambda_S-\lambda_0=2 \lambda_C \sin ^2 \varphi_2 \text { mit } \lambda_C=\frac{\hbar}{m_0 \mathrm{C}}=2,4262 \cdot 10^{-12} \mathrm{~m}
+\label{eq:compton_streuformel}
+\end{equation}
+
+$\lambda_C$ bezeichnet dabei die Compton-Wellenlänge des Elektrons.
+
+Im Versuch werden die Energien der gestreuten Strahlung gemessen. Die entsprechend umgeformte Formel lautet:
+\begin{equation}
+	E_S=\frac{E_0}{1+\frac{E_0}{m_0 c^2}(1-\cos \varphi)}
+\label{eq:energie_der_strahlung}
+\end{equation}
+
+$E_s$ bezeichnet dabei die Energie der gestreuten Strahlung und 
+$E_0$ die Primärenergie \cite{unterlagen_compton}.
 
 \section{Versuchsanordnung}\label{sec:versuchsanordnung}
 
