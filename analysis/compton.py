@@ -2,8 +2,17 @@ from labtool_ex2 import Project
 from sympy import exp, pi, sqrt, Abs, cos
 
 # from sympy.physics.units.systems.si import elementary_charge, boltzmann_constant
-from scipy.constants import elementary_charge, Boltzmann, h, m_e, speed_of_light
+from scipy.constants import (
+    elementary_charge,
+    Boltzmann,
+    h,
+    m_e,
+    speed_of_light,
+    Rydberg,
+)
 import numpy as np
+from scipy import signal
+from scipy.signal import find_peaks, peak_prominences
 
 # from numpy.typing import NDArray
 import pandas as pd
@@ -23,6 +32,8 @@ def test_compton_protokoll():
         "phi": r"\phi",
         "E": r"E_\text{Char}",
         "Er": r"E_\text{Ruhe}",
+        "M": r"M",
+        "ERyd": r"\sqrt{\frac{E}{R_y}}",
     }
     gv = {
         "Z": r"1",
@@ -30,6 +41,8 @@ def test_compton_protokoll():
         "phi": r"\si{\degree}",
         "E": r"\si{\kilo\eV}",
         "Er": r"\si{\kilo\eV}",
+        "M": r"\si{\kg}",
+        "ERyd": r"1",
     }
 
     pd.set_option("display.max_columns", None)
@@ -65,11 +78,11 @@ def test_compton_protokoll():
         y=E,
         eqn=E,
         style=r"#f49004",
-        label=r"Gut",
+        label=r"",
         offset=[0, 20],
         use_all_known=False,
         guess={
-            "Er": 511,
+            "Er": 553,
         },
         bounds=[
             {"name": "Er", "min": 0.01, "max": 1e3},
@@ -82,9 +95,11 @@ def test_compton_protokoll():
     Er = ufloat(vals["Er"].value, vals["Er"].stderr)
     print(Er * 1e3 * elementary_charge / speed_of_light**2)
 
-    P.figure.suptitle("Fit Spezifischer Elektronenmasse")
+    P.figure.suptitle(
+        "Bestimmung der Elektronenruheenergie\n mittels dem Klein-Nishina Wirkungsquerschnitt"
+    )
     P.figure.tight_layout()
-    P.ax_legend_all(loc=4)
+    P.ax_legend_all(loc=5)
     ax = P.savefig("Klein-Nishina.pdf")
 
     # Aufgabe 2
@@ -92,10 +107,119 @@ def test_compton_protokoll():
     filepath = os.path.join(os.path.dirname(__file__), file)
     P.load_data(filepath, loadnew=True)
 
-    for elem in ["Ti", "Fe", "Ni", "Cu", "Zn", "Zr", "Mo", "Ag", "Mag", "Ring"]:
-        print(P.data[f"E{elem}"].values[P.data[f"N{elem}"].idxmax()])
+    # elements = ["Ti", "Fe", "Ni", "Cu", "Zn", "Zr", "Mo", "Ag", "Mag", "Ring"]
+    elements = ["Ti", "Fe", "Ni", "Cu", "Zn", "Zr", "Mo", "Ag"]
+    k = np.asarray(
+        [P.data[f"E{elem}"].values[P.data[f"N{elem}"].idxmax()] for elem in elements]
+    )
 
-    # print(P.data)
+    alpha = pd.DataFrame()
+    Za = [22, 26, 28, 29, 30, 40, 42, 47]
+    Ma = np.asarray([47.867, 55.84, 58.693, 63.55, 65.4, 91.22, 95.95, 107.868])
+    alpha["E"] = k * elementary_charge * 1e3
+    alpha["dE"] = (k * 0 + 0.2) * elementary_charge * 1e3
+    alpha["Z"] = Za
+    alpha["dZ"] = 0
+    alpha["M"] = Ma * 1.6605390666e-27
+    alpha["dM"] = alpha["M"] * 0.00001
+    P.data = alpha
+    P.vload()
+
+    ERyd = sqrt(4 * E / (3 * h * speed_of_light * Rydberg) * (1 + m_e / M))
+    P.resolve(ERyd)
+
+    S = Z - ERyd
+    P.resolve(S)
+    print(S.data)
+
+    P.plot_data(
+        ax,
+        Z,
+        ERyd,
+        label=r"$K_\alpha$ Daten",
+        style="#f49004",
+        errors=True,
+    )
+
+    ERyd = Z - S
+    vals = P.plot_fit(
+        axes=ax,
+        x=Z,
+        y=ERyd,
+        eqn=ERyd,
+        style=r"#f49004",
+        label=r"$K_\alpha$",
+        offset=[0, 20],
+        use_all_known=False,
+        guess={
+            "S": 1.0,
+        },
+        bounds=[
+            {"name": "S", "min": 0.8, "max": 1.4},
+        ],
+        add_fit_params=True,
+        granularity=10000,
+        # gof=True,
+        scale_covar=True,
+    )
+    beta = pd.DataFrame()
+    Zb = [28, 29, 30, 40, 42, 47]
+    Mb = np.asarray([58.693, 63.55, 65.4, 91.22, 95.95, 107.868])
+    kb = np.asarray([8.2, 8.7, 9.5, 17.5, 19.4, 24.4])
+    beta["E"] = kb * elementary_charge * 1e3
+    beta["dE"] = (kb * 0 + 0.2) * elementary_charge * 1e3
+    beta["Z"] = Zb
+    beta["dZ"] = 0
+    beta["M"] = Mb * 1.6605390666e-27
+    beta["dM"] = beta["M"] * 0.00001
+    P.data = beta
+    P.vload()
+
+    ERyd = sqrt(9 * E / (8 * h * speed_of_light * Rydberg) * (1 + m_e / M))
+
+    P.resolve(ERyd)
+
+    S = Z - ERyd
+    P.resolve(S)
+    print(P.data)
+
+    P.plot_data(
+        ax,
+        Z,
+        ERyd,
+        label=r"$K_\beta$ Daten",
+        style="#BC2C1A",
+        errors=True,
+    )
+
+    ERyd = Z - S
+
+    vals = P.plot_fit(
+        axes=ax,
+        x=Z,
+        y=ERyd,
+        eqn=ERyd,
+        style=r"#BC2C1A",
+        label=r"$K_\beta$",
+        offset=[0, 40],
+        use_all_known=False,
+        guess={
+            "S": 2.0,
+        },
+        bounds=[
+            {"name": "S", "min": 0.8, "max": 4},
+        ],
+        add_fit_params=True,
+        granularity=10000,
+        # gof=True,
+        scale_covar=True,
+    )
+    P.figure.suptitle(
+        "Bestimmung der Abschirmungskonstante \n mittels dem Moseyleysches Gesetzt"
+    )
+    P.figure.tight_layout()
+    P.ax_legend_all(loc=4)
+    ax = P.savefig("moseley.pdf")
 
 
 if __name__ == "__main__":
