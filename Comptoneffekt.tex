@@ -440,17 +440,27 @@ folgenden Abbildungen immer mit dem Referenzspektrum sichtbar.
 \end{figure}
 
 Der gemessene Energiewert des Peaks wird in der Software mit der paek finder
-Funktion bestimmt und nochmals in \autoref{tab:energien_roentgen} angeführt.
+Funktion bestimmt.
+Bei den abgelesenen Werten wird zwischen den K-alpha-Strahlen, in \autoref{tab:energien_roentgen}, und K-beta-Strahlen,
+in \autoref{tab:energien_roentgen2}, unterschieden.
 
-\begin{table}
-	\caption{}
+%todo ergänzung der elementabkürzung in tab
+
+\begin{table}[H]
+	\caption[Abgelesene Energiewerte K-alpha-Strahlen der entsprechenden Elemente]
+	{Abgelesene Energiewerte K-alpha-Strahlen der entsprechenden Elemente\\
+	$E_{Char}$ \dots abgelesener Energiewert in \SI{}{\kilo eV}\\
+	$Z$ \dots Ordnungszahl des ensprechenden Elements}
 	\label{tab:energien_roentgen}
 	\centering
 	\input{./tables/messreihe_roentgenKalpha.tex}
 \end{table}
 
-\begin{table}
-	\caption{}
+\begin{table}[H]
+	\caption[Abgelesene Energiewerte K-beta-Strahlen der entsprechenden Elemente]
+	{Abgelesene Energiewerte K-beta-Strahlen der entsprechenden Elemente\\
+	$E_{Char}$ \dots abgelesener Energiewert in \SI{}{\kilo eV}\\
+	$Z$ \dots Ordnungszahl des ensprechenden Elements}
 	\label{tab:energien_roentgen2}
 	\centering
 	\input{./tables/messreihe_roentgenKbeta.tex}
@@ -539,7 +549,7 @@ sichtbar.
 
 Nun wird, wie bereits in \autoref{sec:versuchsanordnung} beschrieben, die
 Abschwächerblende entfernt und der Targethalter wieder Eingebaut. Auf diesen
-wirdvorsichtig die Plexiglasprobe gelegt. Weiters wird wieder ein
+wird vorsichtig die Plexiglasprobe gelegt. Weiters wird wieder ein
 Emissionsstrom von \SI{1.00(2)}{\milli\ampere} verwendet. Nun wird der
 Targetarm über den entsprechenden Drehknopf um einen Winkel von
 \SI{20.0(2)}{\degree} geneigt und für alle Messungen in dieser Position
@@ -555,7 +565,10 @@ Funktion die Energie des Peaks beim entsprechenden Abstrahlwinkel bestimmt und
 in \autoref{tab:werte_compton} notiert.
 
 \begin{table}
-	\caption{}
+	\caption[Verzeichnete Energie bei entsprechenden Abstrahlwinkel]
+	{Verzeichnete Energie bei entsprechenden Abstrahlwinkel\\
+	$\phi$ \dots entsprechender Abstrahlwinkel in \SI{}{\degree}\\
+	$E_{Char}$ \dots verzeichneter Energiewert in \SI{}{\kilo eV}}
 	\label{tab:werte_compton}
 	\centering
 	\input{./tables/messreihe_werte_compton.tex}
