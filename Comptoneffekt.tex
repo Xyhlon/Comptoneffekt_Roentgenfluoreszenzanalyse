@@ -401,7 +401,19 @@ folgenden Abbildungen immer mit dem Referenzspektrum sichtbar.
 Der gemessene Energiewert des Peaks wird in der Software mit der paek finder
 Funktion bestimmt und nochmals in \autoref{tab:energien_roentgen} angeführt.
 
-%todo tab:energien_roentgen
+\begin{table}
+	\caption{}
+	\label{tab:energien_roentgen}
+	\centering
+	\input{./tables/messreihe_roentgenKalpha.tex}
+\end{table}
+
+\begin{table}
+	\caption{}
+	\label{tab:energien_roentgen2}
+	\centering
+	\input{./tables/messreihe_roentgenKbeta.tex}
+\end{table}
 
 \subsubsection{unbekannte Probe}
 
@@ -451,12 +463,12 @@ den Metallplättchen. Die erzeugten Spektren sind in folgenden
 Nachdem das Röntgengerät wie bereits in \autoref{sec:versuchsanordnung}
 beschrieben vorbereitet wurde, indem der Targetarm ausgebaut wird und Zr -
 Filter, sowie die Abschwächerblende positioniert wurden, wird zunächst der
-Emissionsstrom auf \SI{0.05(2)}{mA} reduziert. In der Cassy Lab Software werden
-die folgende Einstellungen vorgenommen: "Vielkanalmessung, 512 Kanäle, negative
-Pulse, Verstärkung = -4, Messdauer = 300 s“ Nun wird das Maximum der Zählrate
-bestimmt, indem eine Messung gestartet wird und der Sensor langsam um die
-0°-Linie geschwenkt wird, bis das Maximum verzeichnet wird, was im konkreten
-Fall bei folgenden Winkel $\alpha_{max}$ der Fall war.
+Emissionsstrom auf \SI{0.05(2)}{\milli\ampere} reduziert. In der Cassy Lab
+Software werden die folgende Einstellungen vorgenommen: "Vielkanalmessung, 512
+Kanäle, negative Pulse, Verstärkung = -4, Messdauer = 300 s“ Nun wird das
+Maximum der Zählrate bestimmt, indem eine Messung gestartet wird und der Sensor
+langsam um die 0°-Linie geschwenkt wird, bis das Maximum verzeichnet wird, was
+im konkreten Fall bei folgenden Winkel $\alpha_{max}$ der Fall war.
 
 \begin{equation*}
 	\alpha_{max} = \SI{-0.6(2)}{\degree}
@@ -487,21 +499,26 @@ sichtbar.
 Nun wird, wie bereits in \autoref{sec:versuchsanordnung} beschrieben, die
 Abschwächerblende entfernt und der Targethalter wieder Eingebaut. Auf diesen
 wirdvorsichtig die Plexiglasprobe gelegt. Weiters wird wieder ein
-Emissionsstrom von \SI{1.00(2)}{mA} verwendet. Nun wird der Targetarm über den
-entsprechenden Drehknopf um einen Winkel von \SI{20.0(2)}{\degree} geneigt und
-für alle Messungen in dieser Position belassen. Für die verschiedenen Messungen
-wird nun der Neigungswinkel des Sensors variiert. Um den tatsächlichen
-Auslenkungswinkel im Bezug zur Energiekalibrierung zu messen muss beachtet
-werden, dass der zuvor bestimmte Versatz von \SI{-0.6(2)}{\degree} immer
-berücksichtigt wird. Eine tatsächliche Verdrehung des Sensors von
-\SI{30}{\degree} würde daher beispielsweise einem Wert von \SI{29.4}{\degree}
-in der Anzeige entsprechen. Der besseren Übersicht halber, werden die Winkel in
-\autoref{tab:werte_compton} bezüglich der Kalibrierung angegeben. Nun wird in
-der Computersoftware über die peak-finder Funktion die Energie des Peaks beim
-entsprechenden Abstrahlwinkel bestimmt und in \autoref{tab:werte_compton}
-notiert.
+Emissionsstrom von \SI{1.00(2)}{\milli\ampere} verwendet. Nun wird der
+Targetarm über den entsprechenden Drehknopf um einen Winkel von
+\SI{20.0(2)}{\degree} geneigt und für alle Messungen in dieser Position
+belassen. Für die verschiedenen Messungen wird nun der Neigungswinkel des
+Sensors variiert. Um den tatsächlichen Auslenkungswinkel im Bezug zur
+Energiekalibrierung zu messen muss beachtet werden, dass der zuvor bestimmte
+Versatz von \SI{-0.6(2)}{\degree} immer berücksichtigt wird. Eine tatsächliche
+Verdrehung des Sensors von \SI{30}{\degree} würde daher beispielsweise einem
+Wert von \SI{29.4}{\degree} in der Anzeige entsprechen. Der besseren Übersicht
+halber, werden die Winkel in \autoref{tab:werte_compton} bezüglich der
+Kalibrierung angegeben. Nun wird in der Computersoftware über die peak-finder
+Funktion die Energie des Peaks beim entsprechenden Abstrahlwinkel bestimmt und
+in \autoref{tab:werte_compton} notiert.
 
-%todo tab:werte_compton
+\begin{table}
+	\caption{}
+	\label{tab:werte_compton}
+	\centering
+	\input{./tables/messreihe_werte_compton.tex}
+\end{table}
 
 Um die Verschiebung des Peaks klar sichtbar zu machen, wird in
 \autoref{fig:verschiebung_compton} das gemessene Spektrum für einen Winkel des

@@ -20,6 +20,9 @@ import matplotlib.pyplot as plt  # noqa
 import os
 from uncertainties import ufloat
 
+# pyright: reportUnboundVariable=false
+# pyright: reportUndefinedVariable=false
+
 
 def degreeUncertainty(x):
     return 0.1
@@ -60,6 +63,13 @@ def test_compton_protokoll():
     P.data.loc[:, "dphi"] = phi.data.apply(degreeUncertainty)
 
     E_0 = 17.44
+
+    P.print_table(
+        phi,
+        E,
+        name="werte_compton",
+        inline_units=True,
+    )
 
     P.plot_data(
         ax,
@@ -125,6 +135,13 @@ def test_compton_protokoll():
     P.data = alpha
     P.vload()
 
+    P.print_table(
+        E,
+        Z,
+        name="roentgenKalpha",
+        inline_units=True,
+    )
+
     ERyd = sqrt(4 * E / (3 * h * speed_of_light * Rydberg) * (1 + m_e / M))
     P.resolve(ERyd)
 
@@ -174,6 +191,13 @@ def test_compton_protokoll():
     beta["dM"] = beta["M"] * 0.00001
     P.data = beta
     P.vload()
+
+    P.print_table(
+        E,
+        Z,
+        name="roentgenKbeta",
+        inline_units=True,
+    )
 
     ERyd = sqrt(9 * E / (8 * h * speed_of_light * Rydberg) * (1 + m_e / M))
 
