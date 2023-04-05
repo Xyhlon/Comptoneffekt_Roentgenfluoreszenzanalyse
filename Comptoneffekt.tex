@@ -75,6 +75,16 @@ der Röntgenfluoreszenzspektroskopie wird die Probe mit Röntgenstrahlen
 bestrahlt, wodurch die Atome in der Probe charakteristische Röntgenstrahlen
 aussenden. Diese charakteristischen Röntgenstrahlen werden dann nachgewiesen
 und analysiert, um die Elementzusammensetzung der Probe zu bestimmen.
+Der schematische Aufbau eines Röntgendetektors ist in \autoref{fig:skizze_roetgendetektor} ersichtlich.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width =0.5\textwidth]{./figures/skizze_roentgendetektor.PNG}
+	\end{center}
+	\caption[Schematische Skizze eines Röntgendetektors] {Schematische Skizze eines
+		Röntgendetektors \cite{unterlagen_rontgenfluorenzenz}
+	}\label{fig:skizze_roetgendetektor}
+\end{figure}
 
 Charakteristische Röntgenstrahlen werden ausgesandt, wenn ein Elektron von
 einem höheren Energieniveau auf ein niedrigeres Energieniveau in einem Atom
@@ -84,11 +94,22 @@ Niveaus ist. Jedes Element hat eine eigene Gruppe von Energieniveaus und damit
 eine eigene Gruppe von charakteristischen Röntgenstrahlen.
 
 Die beiden in der RFA-Analyse am häufigsten verwendeten charakteristischen
-Röntgenstrahlen sind die K-Alpha- und K-Beta-Emissionen. Diese Emissionen
+Röntgenstrahlen sind die K-alpha- und K-beta-Emissionen. Diese Emissionen
 treten auf, wenn ein Elektron von der K-Schale (der äußersten Elektronenschale)
 in die L-Schale bzw. von der K-Schale in die M-Schale fällt. Die Energie dieser
 Emissionen hängt von der Ordnungszahl des Elements ab und kann daher zur
 Identifizierung des in der Probe vorhandenen Elements verwendet werden.
+Diese Benennung ist schematisch in \autoref{fig:termschema_roentgenlinien} sichtbar.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width =0.5\textwidth]{./figures/termschema_roentgenlinien.PNG}
+	\end{center}
+	\caption[Termschema der charakteristischen Röentgenlinien] {Termschema der
+		charakteristischen Röentgenlinien \cite{unterlagen_rontgenfluorenzenz}
+	}\label{fig:termschema_roentgenlinien}
+\end{figure}
+
 
 Die relative Intensität der K-alpha- und K-beta-Emissionen kann auch zur
 Bestimmung der prozentualen Zusammensetzung des Elements in der Probe verwendet
@@ -99,7 +120,7 @@ unbekannten Probe berechnet werden.
 
 Das Moseley-Gesetz setzt die Energie der von einem Element ausgesandten
 charakteristischen Röntgenstrahlen mit der Ordnungszahl des Elements in
-Beziehung. Konkret ist die Energie der K-Alpha-Emission proportional zu $(Z -
+Beziehung. Konkret ist die Energie der K-alpha-Emission proportional zu $(Z -
 	S)^2$, wobei $Z$ die Ordnungszahl des Elements und $S$ eine Abschirmkonstante
 ist, die die Abschirmung der Kernladung durch die inneren Elektronen
 berücksichtigt. Durch Messung der Energie der K-alpha-Emission für mehrere
@@ -111,23 +132,45 @@ charakteristischen Röntgenstrahlen, die von einem Element emittiert werden, und
 ist daher für die genaue Bestimmung der Elementzusammensetzung mit Hilfe der
 RFA-Spektroskopie von wesentlicher Bedeutung.
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width =0.5\textwidth]{./figures/skizze_roentgendetektor.PNG}
-	\end{center}
-	\caption[Schematische Skizze eines Röntgendetektors] {Schematische Skizze eines
-		Röntgendetektors \cite{unterlagen_rontgenfluorenzenz}
-	}\label{fig:skizze_roetgendetektor}
-\end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width =0.5\textwidth]{./figures/termschema_roentgenlinien.PNG}
-	\end{center}
-	\caption[Termschema der charakteristischen Röentgenlinien] {Termschema der
-		charakteristischen Röentgenlinien \cite{unterlagen_rontgenfluorenzenz}
-	}\label{fig:termschema_roentgenlinien}
-\end{figure}
+Die Energie $E_n$ des Elektrons wird dabei durch folgende modifizierte Bohrsche Formel Berechnet.
+
+\begin{equation}
+	E_n =-R h c \frac{\left(z-\sigma_n\right)^2}{n^2} 
+	\label{eq:energie_elektron}
+\end{equation}
+$n$ bezeichnet dabei die Hauptquantenzahl, $Z$ die Kernladungszahl, $\sigma_n$ die Abschirmkonstante
+und $R$ die Rydbergkonstante ($R=\frac{m_e e^4}{8 \varepsilon_0^2 h^8 c}$).
+Die Hauptquantenzahl $n$ bezeichnet die Elektronenschalen: $n=1$ für die K-Schale, $n=2$ für die L-Schale, $n=3$ für die M-Schale usw.
+
+
+Für die Frequenzen der charakteristischen Linien $\sigma=\left(E_2-E_1\right) / h$ bei den Übergängen $n_2->n_1\left(n_2>n_1\right)$ gilt folgender Zusammenhang:
+\begin{equation}
+	\nu=c R\left[\frac{\left(Z-\sigma_{n 1}\right)^2}{n_1^2}-\frac{\left(Z-\sigma_{n 2}\right)^2}{n_2^2}\right]
+	\label{eq:frequenz}
+\end{equation}
+
+Wird nun eine mittlere Abschirmkonstante $\sigma_{2,1}$ für einen Übergang von $n_2$ nach $n_1$ eingeführt, ergibt sich folgendes als das Moseleysche Gesetz:
+\begin{equation}
+	\sqrt{\frac{v}{v_R}}=\left(Z-\sigma_{2,1}\right) \sqrt{\frac{1}{n_1^2}-\frac{1}{n_2^2}}
+	\label{eq:Moseley}
+\end{equation}
+
+
+$\sigma_R=c_R$ bezeichnet dabei die Rydberg-Frequenz.
+
+Nun ergibt sich für die Energien der charakteristischen Linie folgendes:
+\begin{equation}
+	\sqrt{\frac{E}{R_y}}=\left(z-\sigma_{2,1}\right) \sqrt{\frac{1}{n_1^2}-\frac{1}{n_2^2}}
+\label{eq:energie_zusammenhang}
+\end{equation}
+
+Setzt man $R_y=R h c \approx 2,18 \times 10^{-18} \mathrm{~J} \approx 13,6 \mathrm{eV}$ und 
+betrachtet die $K \alpha$-Linien leichterer Elemente $(\mathrm{Z}<30)$ ergibt sich schließlich \cite{unterlagen_rontgenfluorenzenz}:
+\begin{equation}
+	\sqrt{\frac{E}{R_y}}=(Z-1) \sqrt{\frac{3}{4}}
+\label{eq:energie_zusammenhang_annaeherung}
+\end{equation}
 
 \subsection{Compton-Effekt}
 
