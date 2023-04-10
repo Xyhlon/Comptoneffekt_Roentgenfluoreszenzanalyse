@@ -475,14 +475,14 @@ folgenden Abbildungen immer mit dem Referenzspektrum sichtbar.
 	\centering
 	\captionbox[Gemessenes Spektrum der Mo - Probe]{\footnotesize Gemessenes Spektrum der Mo - Probe (rot) mit
 		Kalibrierungsspektrum von Fe und Zn (schwarz) \\
-		$E_A$ \dots entsprechende Energie in keV\\
-		$N_A$ \dots verzeichnete Counts
+		$E_A \dots$ entsprechende Energie in keV\\
+		$N_A \dots$ verzeichnete Counts
 		\label{fig:spektrum_Mo}}{
 		\includegraphics[width=.45\textwidth]{./figures/roentgen/Mo.png} } \hfill
 	\captionbox[Gemessenes Spektrum der Ag - Probe]{\footnotesize Gemessenes Spektrum der Ag - Probe (rot) mit
 		Kalibrierungsspektrum von Fe und Zn (schwarz) \\
-		$E_A$ \dots entsprechende Energie in keV\\
-		$N_A$ \dots verzeichnete Counts
+		$E_A \dots$ entsprechende Energie in keV\\
+		$N_A \dots$ verzeichnete Counts
 		\label{spektrum_Ag}}{
 		\includegraphics[width=0.45\textwidth]{./figures/roentgen/Ag.png} }
 \end{figure}
@@ -497,8 +497,8 @@ K-alpha-Strahlen, in \autoref{tab:energien_roentgen}, und K-beta-Strahlen, in
 \begin{table}[H]
 	\caption[Abgelesene Energiewerte K-alpha-Strahlen der entsprechenden Elemente]
 	{Abgelesene Energiewerte K-alpha-Strahlen der entsprechenden Elemente \\
-		$E_{Char}$ \dots abgelesener Energiewert in \SI{}{\kilo eV}          \\
-		$Z$ \dots Ordnungszahl des ensprechenden Elements
+		$E_{Char} \dots$ abgelesener Energiewert in \si{\kilo eV}            \\
+		$Z \dots$ Ordnungszahl des ensprechenden Elements
 	}
 	\label{tab:energien_roentgen}
 	\centering
@@ -508,8 +508,8 @@ K-alpha-Strahlen, in \autoref{tab:energien_roentgen}, und K-beta-Strahlen, in
 \begin{table}[H]
 	\caption[Abgelesene Energiewerte K-beta-Strahlen der entsprechenden Elemente]
 	{Abgelesene Energiewerte K-beta-Strahlen der entsprechenden Elemente \\
-		$E_{Char}$ \dots abgelesener Energiewert in \SI{}{\kilo eV}         \\
-		$Z$ \dots Ordnungszahl des ensprechenden Elements
+		$E_{Char} \dots$  abgelesener Energiewert in \SI{}{\kilo eV}        \\
+		$Z \dots$  Ordnungszahl des ensprechenden Elements
 	}
 	\label{tab:energien_roentgen2}
 	\centering
@@ -749,8 +749,22 @@ geplottet um denselben Bereich der Daten abzudecken.
 \subsection{Röntgenfluoreszenzanalyse}
 
 \subsubsection{bereitgestellte Metalle}
+Abschirmungskonstanten der K-Linien wirken richtig. Gemessene K-Linien stimmen
+mit denen der XrayDB überein~\cite{newville_xraypyxraydb_2023}.
+
+Sieht gut aus nice.
 
 \subsubsection{unbekannte Probe}
+
+Ja sieht plausibel aus Magnet aus Nickel und Eisen (circa $5:2$) und Eisen
+Meteorit ist doch großteils aus Chrom circa $3:1$ Verhältnis zwischen Chrom und
+Eisen. Der extra Peak beim Ring ist ein Molybdän Peak, wahrscheinlich von der
+Reflexion der Strahlung, und sollte daher ignoriert werden.
+
+Grund wieso 0.1 vom richtigen Entfernt keine Ahnung? mussen wir noch
+diskutieren
+
+\subsubsection{Überprüfung der Kalibrierung}
 
 Um sicherzustellen, ob sich die Kalibration nicht verändert hat wurde zum
 Schluss nochmals die Fe Probe eingelegt und das in \autoref{fig:fe_zumSchluss}
@@ -759,8 +773,8 @@ sichtbare Spektrum erzeugt.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width =\textwidth]{./figures/roentgen/KalibrieungErhaltenFe.png}
-	\caption[Erneute Messung des Spektrums der Fe - Probe] {Erneute Messung des Spektrums
-		der Fe - Probe (blau) mit zuvor erzeugtem Kalibrierungsspektrum von Fe und Zn
+	\caption[Erneute Messung des Spektrums der Fe-Probe] {Erneute Messung des Spektrums der
+		Fe-Probe (blau) mit zuvor erzeugtem Kalibrierungsspektrum von Fe und Zn
 		(schwarz)                                \\
 		$E_A$ \dots entsprechende Energie in keV \\
 		$N_A$ \dots verzeichnete Counts
@@ -774,7 +788,12 @@ geändert hat.
 
 Hängt sehr von der Primärenergie Ab
 
-Wenn Anpassung gemacht wird
+Anpassung der Primärenergie $E_0$ von der Häufigkeit gemittelten
+$K_\alpha$-Übergangsenergie $\SI{17.44}{\kilo\eV}$ zur Häufigsten
+$K_\alpha$-Übergangsenergie $\SI{17.48}{\kilo\eV}$ verursacht die nötige
+Anpassung damit der Fit besser Funktioniert und die richtige Ruheenergie vom
+Elektron gefunden werden kann.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\textwidth]{figures/Klein-Nishina-Improved.pdf}
@@ -791,10 +810,6 @@ Wenn Anpassung gemacht wird
 	}\label{fig:Klein-Nishina-Improved}
 \end{figure}
 
-\subsubsection{Energiekalibrierung des Detektors}
-
-\subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
-
 \section{Zusammenfassung}\label{sec:zusammenfassung}
 
 Hier werden nochmals alle Ergebnisse dieser Experimentenfolge aufgelistet.
@@ -805,13 +820,30 @@ Wobei die meisten zu erstellenden Diagramme Aufgrund der Länge der
 
 \subsubsection{bereitgestellte Metalle}
 
+\begin{enumerate}
+	\item $K_\alpha$-Linie Abschirmkonstante: \num{0.90(5)}
+	\item $K_\beta$-Linie Abschirmkonstante: \num{2.01(4)}
+\end{enumerate}
+
 \subsubsection{unbekannte Probe}
+\begin{enumerate}
+	\item Meteoritenring:
+	      \begin{enumerate}
+		      \item $\SI{5.5(2)}{\kilo\eV} \rightarrow $ \ch{Cr} $\approx \SI{75}{\percent}$
+		      \item $\SI{6.4(2)}{\kilo\eV} \rightarrow $ \ch{Fe} $\approx \SI{25}{\percent}$
+	      \end{enumerate}
+	\item Magnet:
+	      \begin{enumerate}
+		      \item $\SI{7.4(2)}{\kilo\eV} \rightarrow $ \ch{Ni} $\approx \SI{72}{\percent}$
+		      \item $\SI{6.4(2)}{\kilo\eV} \rightarrow $ \ch{Fe} $\approx \SI{28}{\percent}$
+	      \end{enumerate}
+\end{enumerate}
 
 \subsection{Compton-Effekt}
 
-\subsubsection{Energiekalibrierung des Detektors}
-
-\subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
+\begin{enumerate}
+	\item Ermittelte Ruheenergie des Elektron $\SI{520(10)}{\kilo\electronvolt}$
+\end{enumerate}
 
 \newpage
 \printbibliography
