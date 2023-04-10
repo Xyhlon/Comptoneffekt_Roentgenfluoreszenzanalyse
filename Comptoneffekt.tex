@@ -5,15 +5,18 @@
 
 % Kopfzeile
 \ihead{WS22\\
-	29.03.2023} \chead{\textsc{Stark} Matthias -- 12004907 \\
-	\textsc{Philipp} Maximilian -- 11839611}
+	29.03.2023}
+
+\chead{\textsc{Stark} Matthias --- 12004907 \\
+	\textsc{Philipp} Maximilian --- 11839611}
+
 \ohead{Röntgenfluoreszenzanalyse \\
 	%FLAB 2 \\
 	Compton-Effekt}
 
 % Fußzeile
 %todo
-%\addbibresource{SolarWirkungsgrad.bib}
+\addbibresource{Compton.bib}
 
 \usepackage{luacode}
 
@@ -68,7 +71,7 @@ Abhängigkeit vom Streuwinkel. Dabei werden folgende Punkte durchgeführt:
 
 \subsection{Röntgenfluoreszenzanalyse}
 
-%todo Max text von röntgenflureszens bitte mit KI
+% todo matthias bitte verbessern
 Die Röntgenfluoreszenzspektroskopie (XRF) ist eine zerstörungsfreie
 Analysetechnik zur Bestimmung der Elementzusammensetzung eines Materials. Bei
 der Röntgenfluoreszenzspektroskopie wird die Probe mit Röntgenstrahlen
@@ -83,7 +86,7 @@ schematische Aufbau eines Röntgendetektors ist in
 		\includegraphics[width =0.5\textwidth]{./figures/skizze_roentgendetektor.PNG}
 	\end{center}
 	\caption[Schematische Skizze eines Röntgendetektors] {Schematische Skizze eines
-		Röntgendetektors \cite{unterlagen_rontgenfluorenzenz}
+		Röntgendetektors \cite{koller_experimente_nodate}
 	}\label{fig:skizze_roetgendetektor}
 \end{figure}
 
@@ -106,8 +109,8 @@ Benennung ist schematisch in \autoref{fig:termschema_roentgenlinien} sichtbar.
 	\begin{center}
 		\includegraphics[width =0.5\textwidth]{./figures/termschema_roentgenlinien.PNG}
 	\end{center}
-	\caption[Termschema der charakteristischen Röentgenlinien] {Termschema der
-		charakteristischen Röentgenlinien \cite{unterlagen_rontgenfluorenzenz}
+	\caption[Termschema der charakteristischen Röntgenlinien] {Termschema der
+		charakteristischen Röntgenlinien \cite{koller_experimente_nodate}
 	}\label{fig:termschema_roentgenlinien}
 \end{figure}
 
@@ -168,7 +171,7 @@ Nun ergibt sich für die Energien der charakteristischen Linie folgendes:
 
 Setzt man $R_y=R h c \approx 2,18 \times 10^{-18} \mathrm{~J} \approx 13,6
 	\mathrm{eV}$ und betrachtet die $K \alpha$-Linien leichterer Elemente
-$(\mathrm{Z}<30)$ ergibt sich schließlich \cite{unterlagen_rontgenfluorenzenz}:
+$(\mathrm{Z}<30)$ ergibt sich schließlich \cite{koller_experimente_nodate}:
 \begin{equation}
 	\sqrt{\frac{E}{R_y}}=(Z-1) \sqrt{\frac{3}{4}}
 	\label{eq:energie_zusammenhang_annaeherung}
@@ -189,7 +192,7 @@ Energie vom Röntgen-Quant auf das Elektron übertragen wird, wie in
 		\includegraphics[width =\textwidth]{./figures/skizze_compton.PNG}
 	\end{center}
 	\caption[Darstellung des Comptoneffekts] {Schematische Darstellung des Comptoneffekts
-		(b) Darstellung des Impulsübertrags \cite{unterlagen_compton}
+		(b) Darstellung des Impulsübertrags \cite{koller_experimente_nodate-1}
 	}\label{fig:skizze_compton}
 \end{figure}
 
@@ -248,7 +251,7 @@ entsprechend umgeformte Formel lautet:
 \end{equation}
 
 $E_s$ bezeichnet dabei die Energie der gestreuten Strahlung und
-$E_0$ die Primärenergie \cite{unterlagen_compton}.
+$E_0$ die Primärenergie \cite{koller_experimente_nodate-1}.
 
 \section{Versuchsanordnung}\label{sec:versuchsanordnung}
 
@@ -394,7 +397,7 @@ gestartet werden.
 
 Nun müssen den zwei erzeugten Peaks die entsprechenden Energien zugeordnet
 werden. Für Fe ist die entsprechende Energie \SI{6.40}{keV} und für Zn
-\SI{8.64}{keV} \cite{unterlagen_rontgenfluorenzenz}. Das erzeugte
+\SI{8.64}{keV} \cite{koller_experimente_nodate}. Das erzeugte
 Kalibrierungsspektrum, samt den durchgeführten Einstellungen, ist in
 \autoref{fig:kalibrierung_rontgenfluoreszenz} sichtbar.
 
@@ -577,8 +580,8 @@ es wichtig darauf zu achten, dass die Tür ordnungsgemäß geschlossen ist. Nun
 wird in der Computersoftware unter dem gleichnamigen Dialogfenster eine
 Energiekalibrierung durchgeführt, indem die Energien für Au L$\alpha$ -
 \SI{9.71}{keV} und Mo K$\alpha$ - \SI{17.44}{keV} übergeben werden
-\cite{unterlagen_compton}. Das so erzeugte Kalibrierungsspektrum mit den
-entsprechenden Einstellungen ist in \autoref{fig:kalibrierung_compton}
+\cite{koller_experimente_nodate-1}. Das so erzeugte Kalibrierungsspektrum mit
+den entsprechenden Einstellungen ist in \autoref{fig:kalibrierung_compton}
 sichtbar.
 
 \begin{figure}[H]
@@ -615,9 +618,8 @@ in \autoref{tab:werte_compton} notiert.
 	\caption[Verzeichnete Energie bei entsprechenden Abstrahlwinkel] {Verzeichnete Energie
 		bei entsprechenden Abstrahlwinkel                            \\
 		$\phi$ \dots entsprechender Abstrahlwinkel in \SI{}{\degree} \\
-		$E_{Char}$ \dots verzeichneter Energiewert in \SI{}{\kilo eV}
-	}
-	\label{tab:werte_compton}
+		$E_{Char}$ \dots verzeichneter Energiewert in \SI{}{\kilo\eV}
+	}\label{tab:werte_compton}
 	\centering
 	\input{./tables/messreihe_werte_compton.tex}
 \end{table}
@@ -658,16 +660,89 @@ Um höchstmögliche Genauigkeit zu garantieren wird erst bei der Darstellung der
 Wert in Tabellen gerundet.
 
 \subsection{Röntgenfluoreszenzanalyse}
+Für die Auswertung wurden die Peaks und deren Streuung per Hand in der
+Cassy-Lab 2 Software ausgemessen.
 
 \subsubsection{bereitgestellte Metalle}
 
+Da bei den bereitgestellten Materialien die Massenzahlen $M$ \& die
+Ordnungszahlen $Z$ bekannt sind, kann Moseleysche Gesetz gezeigt und die
+Abschirmkonstante $S$ der $K_\alpha$- und $K_\beta$-Linien durch einen Linearen
+Fit mit \autoref{eq:Moseley} bestimmt werden. Für $K_\alpha$ ist eine Übergang
+von $n=2 \rightarrow n'=1$ zu betrachten und für $K_\beta$ ist eine Übergang
+von $n=3 \rightarrow n'=1$ zu betrachten. Dabei wurde alles bis auf $(Z-S)$ auf
+die Energieseite umgeformt. Sodass eine $1:1$ Relation gibt. Damit das
+Moseleysche Gesetz leicht zu bestätigen oder Falsifizieren ist.
+
+\begin{align}
+	\sqrt{\frac{\tilde{E}}{R_y}} & = Z-S\label{eq:linearMoseleyIndepent} \\
+	\tilde{E}                    & = \frac{n^2n'^2}{n'^2-n^2}E           \\
+	R_y                          & = cR_\infty \frac{1}{1+\frac{m_e}{M}}
+\end{align}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/moseley.pdf}
+	\end{center}
+	\caption[Abschirmkonstanten K-alpha- und K-beta-Linien]{In dieser Graphik ist das
+		linearisiert Moseley-Gesetz für $K_\alpha$- (orange) und $K_\beta$-Linien (rot)
+		dargestellt und linear nach \autoref{eq:linearMoseleyIndepent} gefittet worden.
+		Wobei $S$ die entsprechenden Abschirmkonstanten sind und
+		$\sqrt{\frac{\tilde{E}}{R_y}}$ unter \autoref{eq:linearMoseleyIndepent} genau
+		definiert und $Z$ die Ordnungszahl ist.
+	}\label{fig:moseley}
+\end{figure}
+
 \subsubsection{unbekannte Probe}
+
+Aus \autoref{fig:spektrum_ring} kann die Zusammensetzung des Meteoritenrings
+herausgelesen werden:
+
+\begin{enumerate}
+	\item $\SI{5.5(2)}{\kilo\eV} \rightarrow $ \ch{Cr}
+	\item $\SI{6.4(2)}{\kilo\eV} \rightarrow $ \ch{Fe}
+\end{enumerate}
+
+Aus \autoref{fig:spektrum_magnet} kann die Zusammensetzung des Magnetens
+herausgelesen werden:
+
+\begin{enumerate}
+	\item $\SI{7.4(2)}{\kilo\eV} \rightarrow $ \ch{Ni}
+	\item $\SI{6.4(2)}{\kilo\eV} \rightarrow $ \ch{Fe}
+\end{enumerate}
+
+Für die Zuordnung der $K_\alpha$-Linien zu den Materialien wurde aus
+XrayDB~\cite{newville_xraypyxraydb_2023} entnommen.
 
 \subsection{Compton-Effekt}
 
-\subsubsection{Energiekalibrierung des Detektors}
+Die Energien $E_\text{S}$, der gestreuten charakteristischen Röntgenstrahlung,
+werden über die verschiedenen Streuwinkel $\varphi$ geplottet um die Relation
+zwischen den zwei Größen darzustellen. Zusätzlich wird der Verlauf der Daten
+mit dem Klein-Nishina-Wirkungsquerschnitt, siehe
+\autoref{eq:energie_der_strahlung}, gefittet, um die Ruheenergie vom Elektron
+zu bestimmen $E_\text{Ruhe}$. Dabei wurde Primärenergie
+$E_0=\SI{17.44}{\kilo\electronvolt}$ nach Angabe der
+Vorbereitung~\cite{koller_experimente_nodate-1} gewählt. Um den Vergleich
+einfacher zu machen wurde der Theoretische Verlauf auch geplottet, dies wurde
+gemacht indem dieselbe Primärenergie verwendet wurde aber die Ruheenergie des
+Elektrons eingesetzt wurde. Der Bereich von \SIrange{30}{150}{\degree} wurde
+geplottet um denselben Bereich der Daten abzudecken.
 
-\subsubsection{Aufnahme der Spektren bei verschiedenen Winkeln}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/Klein-Nishina.pdf}
+	\caption{Diese Graphik beinhaltet den Verlauf der gestreuten
+		Energie $E_\text{S}$ (von Molybden Röntgenröhre als Quelle)
+		bei verschiedenen Streuwinkeln $\varphi$.
+		Hier ist in blau der Theoretische Fit des Klein-Nishina-Wirkungsquerschnitt
+		bei einer Ruheenergie von \SI{511}{\kilo\eV} zu sehen und
+		der hier gefittete Wert (in oranger Box) der
+		Elektronenruheenergie $E_\text{Ruhe}$ ersichtlich. Wobei
+		die Primärenergie $E_0$ beim Fitten auf $\SI{17.44}{\kilo\electronvolt}$
+		gesetzt worden ist.
+	}\label{fig:Klein-Nishina}
+\end{figure}
 
 \section{Diskussion}\label{sec:diskussion}
 
@@ -682,9 +757,8 @@ Schluss nochmals die Fe Probe eingelegt und das in \autoref{fig:fe_zumSchluss}
 sichtbare Spektrum erzeugt.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width =\textwidth]{./figures/roentgen/KalibrieungErhaltenFe.png}
-	\end{center}
+	\centering
+	\includegraphics[width =\textwidth]{./figures/roentgen/KalibrieungErhaltenFe.png}
 	\caption[Erneute Messung des Spektrums der Fe - Probe] {Erneute Messung des Spektrums
 		der Fe - Probe (blau) mit zuvor erzeugtem Kalibrierungsspektrum von Fe und Zn
 		(schwarz)                                \\
@@ -697,6 +771,25 @@ Hier wird klar ersichtlich, dass sich die Kalibrierung, wie erwartet, nicht
 geändert hat.
 
 \subsection{Compton-Effekt}
+
+Hängt sehr von der Primärenergie Ab
+
+Wenn Anpassung gemacht wird
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/Klein-Nishina-Improved.pdf}
+	\caption{Diese Graphik beinhaltet den Verlauf der gestreuten
+		Energie $E_\text{S}$ (von Molybden Röntgenröhre als Quelle)
+		bei verschiedenen Streuwinkeln $\varphi$.
+		Hier ist in blau der Theoretische Fit des Klein-Nishina-Wirkungsquerschnitt
+		bei einer Ruheenergie von \SI{511}{\kilo\eV} zu sehen und
+		der hier gefittete Wert (in oranger Box) der
+		Elektronenruheenergie $E_\text{Ruhe}$ ersichtlich.
+		Hier wurde die Primärenergie $E_0=\SI{17.48}{\kilo\eV}$ auf die
+		wahrscheinlichste $K_\alpha$-Linienübergang (K-L3) Energie von Molybden gesetzt
+		(siehe~\cite{noauthor_x-ray_nodate-1}).
+	}\label{fig:Klein-Nishina-Improved}
+\end{figure}
 
 \subsubsection{Energiekalibrierung des Detektors}
 
