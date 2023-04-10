@@ -32,11 +32,11 @@ def test_compton_protokoll():
     gm = {
         "Z": r"Z",
         "S": r"S",
-        "phi": r"\phi",
-        "E": r"E_\text{Char}",
+        "phi": r"\varphi",
+        "E": r"E_\text{S}",
         "Er": r"E_\text{Ruhe}",
         "M": r"M",
-        "ERyd": r"\sqrt{\frac{E}{R_y}}",
+        "ERyd": r"\sqrt{\frac{\tilde{E}}{R_y}}",
     }
     gv = {
         "Z": r"1",
@@ -104,6 +104,13 @@ def test_compton_protokoll():
     )
     Er = ufloat(vals["Er"].value, vals["Er"].stderr)
     print(Er * 1e3 * elementary_charge / speed_of_light**2)
+
+    phi = np.linspace(30, 150, 1000)
+    ax.plot(
+        phi,
+        E_0 / (1 + E_0 * (1 - np.cos(phi / 180 * np.pi)) / 510.998950),
+        label="Theoretische Kurve",
+    )
 
     P.figure.suptitle(
         "Bestimmung der Elektronenruheenergie\n mittels dem Klein-Nishina Wirkungsquerschnitt"
