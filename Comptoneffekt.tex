@@ -5,8 +5,8 @@
 
 % Kopfzeile
 \ihead{WS22\\
-	29.03.2023} \chead{\textsc{Stark} Matthias - 12004907 \\
-	\textsc{Philipp} Maximilian - 11839611}
+	29.03.2023} \chead{\textsc{Stark} Matthias -- 12004907 \\
+	\textsc{Philipp} Maximilian -- 11839611}
 \ohead{Röntgenfluoreszenzanalyse \\
 	%FLAB 2 \\
 	Compton-Effekt}
@@ -74,8 +74,9 @@ Analysetechnik zur Bestimmung der Elementzusammensetzung eines Materials. Bei
 der Röntgenfluoreszenzspektroskopie wird die Probe mit Röntgenstrahlen
 bestrahlt, wodurch die Atome in der Probe charakteristische Röntgenstrahlen
 aussenden. Diese charakteristischen Röntgenstrahlen werden dann nachgewiesen
-und analysiert, um die Elementzusammensetzung der Probe zu bestimmen.
-Der schematische Aufbau eines Röntgendetektors ist in \autoref{fig:skizze_roetgendetektor} ersichtlich.
+und analysiert, um die Elementzusammensetzung der Probe zu bestimmen. Der
+schematische Aufbau eines Röntgendetektors ist in
+\autoref{fig:skizze_roetgendetektor} ersichtlich.
 
 \begin{figure}[H]
 	\begin{center}
@@ -98,8 +99,8 @@ Röntgenstrahlen sind die K-alpha- und K-beta-Emissionen. Diese Emissionen
 treten auf, wenn ein Elektron von der K-Schale (der äußersten Elektronenschale)
 in die L-Schale bzw. von der K-Schale in die M-Schale fällt. Die Energie dieser
 Emissionen hängt von der Ordnungszahl des Elements ab und kann daher zur
-Identifizierung des in der Probe vorhandenen Elements verwendet werden.
-Diese Benennung ist schematisch in \autoref{fig:termschema_roentgenlinien} sichtbar.
+Identifizierung des in der Probe vorhandenen Elements verwendet werden. Diese
+Benennung ist schematisch in \autoref{fig:termschema_roentgenlinien} sichtbar.
 
 \begin{figure}[H]
 	\begin{center}
@@ -109,7 +110,6 @@ Diese Benennung ist schematisch in \autoref{fig:termschema_roentgenlinien} sicht
 		charakteristischen Röentgenlinien \cite{unterlagen_rontgenfluorenzenz}
 	}\label{fig:termschema_roentgenlinien}
 \end{figure}
-
 
 Die relative Intensität der K-alpha- und K-beta-Emissionen kann auch zur
 Bestimmung der prozentualen Zusammensetzung des Elements in der Probe verwendet
@@ -132,44 +132,46 @@ charakteristischen Röntgenstrahlen, die von einem Element emittiert werden, und
 ist daher für die genaue Bestimmung der Elementzusammensetzung mit Hilfe der
 RFA-Spektroskopie von wesentlicher Bedeutung.
 
-
-Die Energie $E_n$ des Elektrons wird dabei durch folgende modifizierte Bohrsche Formel Berechnet.
+Die Energie $E_n$ des Elektrons wird dabei durch folgende modifizierte Bohrsche
+Formel Berechnet.
 
 \begin{equation}
-	E_n =-R h c \frac{\left(z-\sigma_n\right)^2}{n^2} 
+	E_n =-R h c \frac{\left(z-\sigma_n\right)^2}{n^2}
 	\label{eq:energie_elektron}
 \end{equation}
 $n$ bezeichnet dabei die Hauptquantenzahl, $Z$ die Kernladungszahl, $\sigma_n$ die Abschirmkonstante
 und $R$ die Rydbergkonstante ($R=\frac{m_e e^4}{8 \varepsilon_0^2 h^8 c}$).
 Die Hauptquantenzahl $n$ bezeichnet die Elektronenschalen: $n=1$ für die K-Schale, $n=2$ für die L-Schale, $n=3$ für die M-Schale usw.
 
-
-Für die Frequenzen der charakteristischen Linien $\sigma=\left(E_2-E_1\right) / h$ bei den Übergängen $n_2->n_1\left(n_2>n_1\right)$ gilt folgender Zusammenhang:
+Für die Frequenzen der charakteristischen Linien $\sigma=\left(E_2-E_1\right) /
+	h$ bei den Übergängen $n_2->n_1\left(n_2>n_1\right)$ gilt folgender
+Zusammenhang:
 \begin{equation}
 	\nu=c R\left[\frac{\left(Z-\sigma_{n 1}\right)^2}{n_1^2}-\frac{\left(Z-\sigma_{n 2}\right)^2}{n_2^2}\right]
 	\label{eq:frequenz}
 \end{equation}
 
-Wird nun eine mittlere Abschirmkonstante $\sigma_{2,1}$ für einen Übergang von $n_2$ nach $n_1$ eingeführt, ergibt sich folgendes als das Moseleysche Gesetz:
+Wird nun eine mittlere Abschirmkonstante $\sigma_{2,1}$ für einen Übergang von
+$n_2$ nach $n_1$ eingeführt, ergibt sich folgendes als das Moseleysche Gesetz:
 \begin{equation}
 	\sqrt{\frac{v}{v_R}}=\left(Z-\sigma_{2,1}\right) \sqrt{\frac{1}{n_1^2}-\frac{1}{n_2^2}}
 	\label{eq:Moseley}
 \end{equation}
-
 
 $\sigma_R=c_R$ bezeichnet dabei die Rydberg-Frequenz.
 
 Nun ergibt sich für die Energien der charakteristischen Linie folgendes:
 \begin{equation}
 	\sqrt{\frac{E}{R_y}}=\left(z-\sigma_{2,1}\right) \sqrt{\frac{1}{n_1^2}-\frac{1}{n_2^2}}
-\label{eq:energie_zusammenhang}
+	\label{eq:energie_zusammenhang}
 \end{equation}
 
-Setzt man $R_y=R h c \approx 2,18 \times 10^{-18} \mathrm{~J} \approx 13,6 \mathrm{eV}$ und 
-betrachtet die $K \alpha$-Linien leichterer Elemente $(\mathrm{Z}<30)$ ergibt sich schließlich \cite{unterlagen_rontgenfluorenzenz}:
+Setzt man $R_y=R h c \approx 2,18 \times 10^{-18} \mathrm{~J} \approx 13,6
+	\mathrm{eV}$ und betrachtet die $K \alpha$-Linien leichterer Elemente
+$(\mathrm{Z}<30)$ ergibt sich schließlich \cite{unterlagen_rontgenfluorenzenz}:
 \begin{equation}
 	\sqrt{\frac{E}{R_y}}=(Z-1) \sqrt{\frac{3}{4}}
-\label{eq:energie_zusammenhang_annaeherung}
+	\label{eq:energie_zusammenhang_annaeherung}
 \end{equation}
 
 \subsection{Compton-Effekt}
@@ -483,17 +485,18 @@ folgenden Abbildungen immer mit dem Referenzspektrum sichtbar.
 \end{figure}
 
 Der gemessene Energiewert des Peaks wird in der Software mit der paek finder
-Funktion bestimmt.
-Bei den abgelesenen Werten wird zwischen den K-alpha-Strahlen, in \autoref{tab:energien_roentgen}, und K-beta-Strahlen,
-in \autoref{tab:energien_roentgen2}, unterschieden.
+Funktion bestimmt. Bei den abgelesenen Werten wird zwischen den
+K-alpha-Strahlen, in \autoref{tab:energien_roentgen}, und K-beta-Strahlen, in
+\autoref{tab:energien_roentgen2}, unterschieden.
 
 %todo ergänzung der elementabkürzung in tab
 
 \begin{table}[H]
 	\caption[Abgelesene Energiewerte K-alpha-Strahlen der entsprechenden Elemente]
-	{Abgelesene Energiewerte K-alpha-Strahlen der entsprechenden Elemente\\
-	$E_{Char}$ \dots abgelesener Energiewert in \SI{}{\kilo eV}\\
-	$Z$ \dots Ordnungszahl des ensprechenden Elements}
+	{Abgelesene Energiewerte K-alpha-Strahlen der entsprechenden Elemente \\
+		$E_{Char}$ \dots abgelesener Energiewert in \SI{}{\kilo eV}          \\
+		$Z$ \dots Ordnungszahl des ensprechenden Elements
+	}
 	\label{tab:energien_roentgen}
 	\centering
 	\input{./tables/messreihe_roentgenKalpha.tex}
@@ -501,9 +504,10 @@ in \autoref{tab:energien_roentgen2}, unterschieden.
 
 \begin{table}[H]
 	\caption[Abgelesene Energiewerte K-beta-Strahlen der entsprechenden Elemente]
-	{Abgelesene Energiewerte K-beta-Strahlen der entsprechenden Elemente\\
-	$E_{Char}$ \dots abgelesener Energiewert in \SI{}{\kilo eV}\\
-	$Z$ \dots Ordnungszahl des ensprechenden Elements}
+	{Abgelesene Energiewerte K-beta-Strahlen der entsprechenden Elemente \\
+		$E_{Char}$ \dots abgelesener Energiewert in \SI{}{\kilo eV}         \\
+		$Z$ \dots Ordnungszahl des ensprechenden Elements
+	}
 	\label{tab:energien_roentgen2}
 	\centering
 	\input{./tables/messreihe_roentgenKbeta.tex}
@@ -608,10 +612,11 @@ Funktion die Energie des Peaks beim entsprechenden Abstrahlwinkel bestimmt und
 in \autoref{tab:werte_compton} notiert.
 
 \begin{table}
-	\caption[Verzeichnete Energie bei entsprechenden Abstrahlwinkel]
-	{Verzeichnete Energie bei entsprechenden Abstrahlwinkel\\
-	$\phi$ \dots entsprechender Abstrahlwinkel in \SI{}{\degree}\\
-	$E_{Char}$ \dots verzeichneter Energiewert in \SI{}{\kilo eV}}
+	\caption[Verzeichnete Energie bei entsprechenden Abstrahlwinkel] {Verzeichnete Energie
+		bei entsprechenden Abstrahlwinkel                            \\
+		$\phi$ \dots entsprechender Abstrahlwinkel in \SI{}{\degree} \\
+		$E_{Char}$ \dots verzeichneter Energiewert in \SI{}{\kilo eV}
+	}
 	\label{tab:werte_compton}
 	\centering
 	\input{./tables/messreihe_werte_compton.tex}
