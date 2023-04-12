@@ -70,7 +70,7 @@ Abhängigkeit vom Streuwinkel. Dabei werden folgende Punkte durchgeführt:
 
 \subsection{Röntgenfluoreszenzanalyse}
 
-% todo matthias bitte verbessern
+
 Die Röntgenfluoreszenzspektroskopie (XRF) ist eine zerstörungsfreie
 Analysetechnik zur Bestimmung der Elementzusammensetzung eines Materials. Bei
 der Röntgenfluoreszenzspektroskopie wird die Probe mit Röntgenstrahlen
@@ -236,7 +236,7 @@ Daraus folgt:
 Woraus sich für die Compton-Streuformel folgender Zusammenhang ergibt:
 
 \begin{equation}
-	\lambda_S-\lambda_0=2 \lambda_C \sin ^2 \varphi_2 \text { mit } \lambda_C=\frac{\hbar}{m_0 \mathrm{C}}=2,4262 \cdot 10^{-12} \mathrm{~m}
+	\lambda_S-\lambda_0=2 \lambda_C \sin ^2 \frac{\varphi}{2} \text { mit } \lambda_C=\frac{h}{m_0 c}=2,4262 \cdot 10^{-12} \mathrm{~m}
 	\label{eq:compton_streuformel}
 \end{equation}
 
@@ -258,7 +258,7 @@ Für beide Teile des Versuchs wird das Röntgengerät aus \autoref{fig:aufabau}
 verwendet. Zunächst wird die Stromversorgung und die Verbindung zum PC mittels
 Cassy Lab hergestellt. Nun wird mit den Drehschaltern eine Spannung von
 \SI{30.0(2)}{\kilo eV} und ein Strom von \SI{1.00(2)}{mA} eingestellt. Nach
-richtigen SChließen der Tür wird die Röntgenstrahlung mit dem HV Knopf kurz
+richtigen Schließen der Tür wird die Röntgenstrahlung mit dem HV Knopf kurz
 eingeschaltet, um zu überprüfen, ob das Gerät funktioniert.
 
 \begin{figure}[H]
@@ -362,18 +362,18 @@ die Röntgenfluoreszenzanalyse die Proben aus \autoref{tab:proben} verwendet.
 		\caption{Proben für den Versuch der Röntgenfluoreszenzanalyse
 		}
 		\begin{tblr}{cells={font=\footnotesize},colspec={lllll}}
-			\textbf{Probe} & \textbf{Element} & \textbf{Anmerkung} \\
-			Fe/Zn          & Verzinktes Eisen & Kalibrierung       \\
-			Ti             & Titan            &                    \\
-			Fe             & Eisen            &                    \\
-			Ni             & Nickel           &                    \\
-			Cu             & Kupfer           &                    \\
-			Zn             & Zink             &                    \\
-			Zr             & Zirkonium        &                    \\
-			Mo             & Molybdän         &                    \\
-			Ag             & Silber           &                    \\
-			Neodyn-Magnet  &                  &                    \\
-			Ring           &                  &                    \\
+			\textbf{Probe} & \textbf{Element} & \textbf{Ordnungszahl} & \textbf{Anmerkung} \\
+			Fe/Zn          & Verzinktes Eisen &               & Kalibrierung       \\
+			Ti             & Titan            &  22                 &                    \\
+			Fe             & Eisen            &   26                    &                    \\
+			Ni             & Nickel           &  28                &                    \\
+			Cu             & Kupfer          &   29                          &                    \\
+			Zn             & Zink             &  30                       &                    \\
+			Zr             & Zirkonium        &  40                    &                    \\
+			Mo             & Molybdän        &  42                    &                    \\
+			Ag             & Silber           &  47                     &                    \\
+			Neodyn-Magnet  &                 &                    &                    \\
+			Ring           &                 &                                  &                    \\
 		\end{tblr}\label{tab:proben}
 	\end{center}
 \end{table}
@@ -486,12 +486,11 @@ folgenden Abbildungen immer mit dem Referenzspektrum sichtbar.
 		\includegraphics[width=0.45\textwidth]{./figures/roentgen/Ag.png} }
 \end{figure}
 
-Der gemessene Energiewert des Peaks wird in der Software mit der paek finder
+Der gemessene Energiewert des Peaks wird in der Computersoftware mithilfe der paek-finder
 Funktion bestimmt. Bei den abgelesenen Werten wird zwischen den
 K-alpha-Strahlen, in \autoref{tab:energien_roentgen}, und K-beta-Strahlen, in
 \autoref{tab:energien_roentgen2}, unterschieden.
 
-%todo ergänzung der elementabkürzung in tab
 
 \begin{table}[H]
 	\caption[Abgelesene Energiewerte K-alpha-Strahlen der entsprechenden Elemente]
@@ -537,8 +536,8 @@ zu Beachten dass bei der Positionierung darauf geachtet wurde, dass die
 Röntgenstrahlen den Ring auch wirklich treffen.
 
 Die Messung der beiden Proben erfolgt nach dem gleichen Schema wie zuvor bei
-den Metallplättchen. Die erzeugten Spektren sind in folgenden
-\autoref{fig:spektrum_magnet} und \autoref{fig:spektrum_ring} sichtbar.
+den Metallplättchen. Die erzeugten Spektren sind in
+\autoref{fig:spektrum_magnet} und \ref{fig:spektrum_ring} sichtbar.
 
 \begin{figure}[H]
 	\centering
@@ -608,7 +607,7 @@ Energiekalibrierung zu messen muss beachtet werden, dass der zuvor bestimmte
 Versatz von \SI{-0.6(2)}{\degree} immer berücksichtigt wird. Eine tatsächliche
 Verdrehung des Sensors von \SI{30}{\degree} würde daher beispielsweise einem
 Wert von \SI{29.4}{\degree} in der Anzeige entsprechen. Der besseren Übersicht
-halber, werden die Winkel in \autoref{tab:werte_compton} bezüglich der
+halber, werden die Winkel in \autoref{tab:werte_compton} mit Berücksichtigung der
 Kalibrierung angegeben. Nun wird in der Computersoftware über die peak-finder
 Funktion die Energie des Peaks beim entsprechenden Abstrahlwinkel bestimmt und
 in \autoref{tab:werte_compton} notiert.
@@ -731,7 +730,7 @@ geplottet um denselben Bereich der Daten abzudecken.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\textwidth]{figures/Klein-Nishina.pdf}
-	\caption{Diese Graphik beinhaltet den Verlauf der gestreuten
+	\caption[Verlauf der gestreuten Energie]{Diese Graphik beinhaltet den Verlauf der gestreuten
 		Energie $E_\text{S}$ (von Molybden Röntgenröhre als Quelle)
 		bei verschiedenen Streuwinkeln $\varphi$.
 		Hier ist in blau der theoretische Fit des Klein-Nishina-Wirkungsquerschnitt
@@ -748,20 +747,27 @@ geplottet um denselben Bereich der Daten abzudecken.
 \subsection{Röntgenfluoreszenzanalyse}
 
 \subsubsection{bereitgestellte Metalle}
-Abschirmungskonstanten der K-Linien wirken richtig. Gemessene K-Linien stimmen
-mit denen der XrayDB überein~\cite{newville_xraypyxraydb_2023}.
 
-Sieht gut aus nice.
+Die Abschirmungskonstanten der K-Linien wirken richtig. Die gemessene K-Linien stimmen
+mit denen der Literaturquelle aus XrayDB überein~\cite{newville_xraypyxraydb_2023}.
+
+Durch die Steigung der 1:1 Korrelation, ersichtlich in \autoref{fig:moseley}, ist das Moseley Gesetz bestätigt.
+
+%Sieht gut aus nice.
 
 \subsubsection{unbekannte Probe}
 
-Ja sieht plausibel aus Magnet aus Nickel und Eisen (circa $5:2$) und Eisen
-Meteorit ist doch großteils aus Chrom circa $3:1$ Verhältnis zwischen Chrom und
+Die Zusammensetzungen wirken plausibel:
+
+Der Magnet besteht großteils aus Nickel und Eisen (circa in Verhältnis $5:2$). Dabei ist zu Beachten, dass
+der Magnet zur Befestigung auf einer Eisenplatte befestigt wurde, was natürlich auch als Eisen am Detektor verzeichnet wird.
+
+Der Meteorit, aus welchem der Ring gefertigt ist, ist großteils aus Chrom circa $3:1$ Verhältnis zwischen Chrom und
 Eisen. Der extra Peak beim Ring ist ein Molybdän Peak, wahrscheinlich von der
 Reflexion der Strahlung, und sollte daher ignoriert werden.
 
-Grund wieso 0.1 vom richtigen Entfernt keine Ahnung? mussen wir noch
-diskutieren
+%Grund wieso 0.1 vom richtigen Entfernt keine Ahnung? mussen wir noch
+%diskutieren
 
 \subsubsection{Überprüfung der Kalibrierung}
 
@@ -771,7 +777,7 @@ sichtbare Spektrum erzeugt.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width =\textwidth]{./figures/roentgen/KalibrieungErhaltenFe.png}
+	\includegraphics[width =0.5\textwidth]{./figures/roentgen/KalibrieungErhaltenFe.png}
 	\caption[Erneute Messung des Spektrums der Fe-Probe] {Erneute Messung des Spektrums der
 		Fe-Probe (blau) mit zuvor erzeugtem Kalibrierungsspektrum von Fe und Zn
 		(schwarz)                                \\
@@ -785,18 +791,18 @@ geändert hat.
 
 \subsection{Compton-Effekt}
 
-Hängt sehr von der Primärenergie Ab
+Insgesammt hängt dieser Versuch sehr von der Primärenergie ab.
 
-Anpassung der Primärenergie $E_0$ von der Häufigkeit gemittelten
-$K_\alpha$-Übergangsenergie $\SI{17.44}{\kilo\eV}$ zur Häufigsten
-$K_\alpha$-Übergangsenergie $\SI{17.48}{\kilo\eV}$ verursacht die nötige
-Anpassung damit der Fit besser Funktioniert und die richtige Ruheenergie vom
-Elektron gefunden werden kann.
+Daher wird eine Anpassung der Primärenergie $E_0$ von der nach Häufigkeit gemittelten
+$K_\alpha$-Übergangsenergie $\SI{17.44}{\kilo\eV}$ zur häufigsten
+$K_\alpha$-Übergangsenergie $\SI{17.48}{\kilo\eV}$ durchgeführt. Dies Verursacht die nötige
+Anpassung damit der Fit besser funktioniert und die richtige Ruheenergie vom
+Elektron gefunden werden kann. Diese Anpassung ist in \autoref{fig:Klein-Nishina-Improved} sichtbar.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\textwidth]{figures/Klein-Nishina-Improved.pdf}
-	\caption{Diese Graphik beinhaltet den Verlauf der gestreuten
+	\caption[Verlauf der gestreuten Energie mit Anpassung der Ruheenergie]{Diese Graphik beinhaltet den Verlauf der gestreuten
 		Energie $E_\text{S}$ (von Molybden Röntgenröhre als Quelle)
 		bei verschiedenen Streuwinkeln $\varphi$.
 		Hier ist in blau der Theoretische Fit des Klein-Nishina-Wirkungsquerschnitt
@@ -809,6 +815,7 @@ Elektron gefunden werden kann.
 	}\label{fig:Klein-Nishina-Improved}
 \end{figure}
 
+\newpage
 \section{Zusammenfassung}\label{sec:zusammenfassung}
 
 Hier werden nochmals alle Ergebnisse dieser Experimentenfolge aufgelistet.
@@ -840,9 +847,9 @@ Wobei die meisten zu erstellenden Diagramme Aufgrund der Länge der
 
 \subsection{Compton-Effekt}
 
-\begin{enumerate}
-	\item Ermittelte Ruheenergie des Elektron $\SI{520(10)}{\kilo\electronvolt}$
-\end{enumerate}
+%\begin{enumerate}
+Ermittelte Ruheenergie des Elektron: $\SI{520(10)}{\kilo\electronvolt}$
+%\end{enumerate}
 
 \newpage
 \printbibliography
